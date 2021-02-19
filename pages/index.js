@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import dynamic from "next/dynamic"
-const Picker = dynamic(() => import("emoji-picker-react"))
+const Picker = dynamic(() => import("emoji-picker-react"), { ssr: false })
 
 export default function Home() {
   const onEmojiClick = (event, emojiObject) => {
